@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="keywords" content="" /> <!-- Eisagwgi lexewn klidia gia tin istoselida -->
+    <meta name="description" content="" /> <!-- Eisagwgi perilipsis tis istoselidas -->
+  	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" /> <!-- Dilwsi glwssas kwdika kai oti tha einai se utf-8 -->
+	<title>Tutorial HTML/CSS</title> <!-- Titlos kurias selidas -->
+	<link href="style.css" rel="stylesheet" type="text/css"> <!-- Eisagoume to arxeio CSS me tis css parametrous -->
+	<script type="text/javascript"> <!-- Dhmiourgia javascript gia to koumpi Sumbouli, na emfanizei minima alert otan patiete to koumpi -->
+		function tip() {
+ 		   alert("Για την καλύτερη σας περιήγηση στο site, θα βοηθούσε η ρύθμιση του μεγέθους προβολής της οθόνης, ώστε να σας  τα δείχνει καλυτέρα. Ευχαριστώ πολύ για την κατανόηση σας!");
+		}
+	</script>
+	<script type="text/javascript"> <!-- Dhmioyrgia javascript gia coocies gia na baloume onoma. -->
+
+	function setCookie(cname,cvalue,exdays) {
+	    var d = new Date();
+	    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+	    var expires = "expires=" + d.toGMTString();
+	    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	}
+
+	function getCookie(cname) {
+	    var name = cname + "=";
+	    var decodedCookie = decodeURIComponent(document.cookie);
+	    var ca = decodedCookie.split(';');
+	    for(var i = 0; i < ca.length; i++) {
+	        var c = ca[i];
+	        while (c.charAt(0) == ' ') {
+	            c = c.substring(1);
+	        }
+	        if (c.indexOf(name) == 0) {
+	            return c.substring(name.length, c.length);
+	        }
+	    }
+	    return "";
+	}
+	
+	function checkCookie() {
+	    var user=getCookie("username");
+	    if (user != "") {
+	        alert("Καλώς ήρθατε ξανά " + user);
+	    } else {
+	       user = prompt("Παρακαλώ συμπληρώστε το όνομα σας:","");
+	       if (user != "" && user != null) {
+	           setCookie("username", user, 30);
+	       }
+	    }
+	}
+
+	</script>
+</head>
+
+<body onload="checkCookie()">
+	
+	<header>
+		<div>
+		<ul class="main-nav"> <!-- H lista tou menu, kai h klassi pou tha pernei tis parametrous apo to css arxeio -->
+			<li class="active"><a href=""> ΑΡΧΙΚΗ </a></li>
+			<li><a href="perigrafi.html"> ΠΕΡΙΓΡΑΦΗ </a></li>
+			<li><a href="mathimata.html"> ΜΑΘΗΜΑΤΑ </a></li>
+			<li><a href="ergalia.html"> ΕΡΓΑΛΕΙΑ </a></li>
+			<li><a href="istoselides.html"> ΙΣΤΟΣΕΛΙΔΕΣ </a></li>
+			<li><a href="epikoinwnia.html"> ΕΠΙΚΟΙΝΩΝΙΑ </a></li>
+		</ul>
+		</div>
+	
+		<div class="hero"> <!-- Eisagwgi parametrwn gia to keimeno -->
+			<h1> καλως ηρθατε στην σελιδα!</h1>
+		</div>
+		
+		<div class="audio1"> <!-- Eisagwgi hxou kai parametrwn -->
+		<audio controls>
+ 		 	<source src="music1.mp3" type="audio/mpeg">
+		</audio>
+		</div>
+
+		
+		<button class="btn" onclick="tip()">Συμβουλή</button> <!-- Dhmiourgia koumpiou pou kalei apo to arxeio css tis parametrous diamorfwsis kai thn function apo tin javascript -->
+		
+		<!-- Eisagwgi plesiou hmerominias/wras apo to parakatw site,(etoimos kwdikas kai ton prosarmozeis analoga me to pws thes) -->
+		<div style="text-align:center;padding:1em 0; margin-top:5%;"> <h3><a style="text-decoration:none;" href="https://www.zeitverschiebung.net/en/city/264371"><span style="color:black;"></span><br /></a></h3> 
+		<iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=medium&timezone=Europe%2FAthens" width="20%" height="115" frameborder="0" seamless></iframe> </div>
+		
+		 <div id="mySidenav" class="sidenav"> <!-- Eisagwgi parametrwn plagio menu -->
+ 			 <a href="https://www.teithe.gr" target="_blank" id="atei">Α.Τ.Ε.Ι.</a>
+			 <a href="https://www.it.teithe.gr" target="_blank" id="tmima">ΤΜΗΜΑ</a>
+			 <a href="https://sites.google.com/site/gtiteithe" target="_blank" id="mathima">ΜΑΘΗΜΑ</a>
+		</div> 
+				
+	</header>
+	
+</body>
+
+</html>
